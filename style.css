@@ -1,3 +1,4 @@
+
 body {
     display: flex;
     flex-direction: column;
@@ -6,7 +7,31 @@ body {
     font-family: Arial, sans-serif;
 }
 
-canvas {
-    border: 2px solid #333;
-    background-color: #fff;
+#gameGrid {
+    display: grid;
+    grid-template-columns: repeat(3, 80px);
+    gap: 5px;
+    margin: 20px;
 }
+
+.cell {
+    width: 80px;
+    height: 80px;
+    background-color: #fff;
+    border: 2px solid #333;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    transition: transform 0.2s;
+}
+
+.cell:hover {
+    transform: scale(1.05);
+}
+
+/* 不同颜色的方块 */
+.color1 { background-color: #FF6B6B; } /* 红 */
+.color2 { background-color: #4ECDC4; } /* 蓝 */
+.color3 { background-color: #45B7D1; } /* 绿 */
